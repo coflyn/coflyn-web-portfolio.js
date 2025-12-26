@@ -13,9 +13,17 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body
-    class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen overflow-hidden"
-  >
+  <body class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <p class="loading-quote">"Code is poetry."</p>
+        <div class="loading-percent-wrapper">
+          <span class="loading-percent">0</span>
+          <span class="loading-symbol">%</span>
+        </div>
+      </div>
+    </div>
     <nav
       class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex items-center justify-between"
     >
@@ -100,6 +108,23 @@
           </div>
         </div>
       </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about-me" class="scroll-indicator">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
     </section>
 
     <script src="assets/js/script.js"></script>
