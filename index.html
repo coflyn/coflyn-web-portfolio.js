@@ -1,12 +1,107 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kvory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body
+    class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen overflow-hidden"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex items-center justify-between"
+    >
+      <div class="flex items-center">
+        <img
+          src="assets/img/icon.png"
+          alt="Kvory"
+          class="w-10 h-10 rounded-lg"
+        />
+      </div>
+
+      <div class="text-slate-500 font-mono text-sm">
+        <span id="current-time">00:00:00</span>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
+    >
+      <div class="grid-bg"></div>
+      <div class="w-full space-y-4">
+        <div class="marquee-container marquee-left">
+          <div class="marquee-content">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
+              JUNIOR SOFTWARE DEVELOPER
+            </h1>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
+              JUNIOR SOFTWARE DEVELOPER
+            </h1>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
+              JUNIOR SOFTWARE DEVELOPER
+            </h1>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
+              JUNIOR SOFTWARE DEVELOPER
+            </h1>
+          </div>
+        </div>
+
+        <div class="marquee-container marquee-right">
+          <div class="marquee-content">
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
+            >
+              FRONTEND
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
   </body>
-  <script src="assets/js/script.js"></script>
 </html>

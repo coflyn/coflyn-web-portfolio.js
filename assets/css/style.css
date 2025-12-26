@@ -1,0 +1,121 @@
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  gap: 4rem;
+  width: max-content;
+}
+
+.marquee-left .marquee-content {
+  animation: marqueeLeftPause 24s ease-in-out infinite;
+}
+
+@keyframes marqueeLeftPause {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(calc(-10% - 0.4rem));
+  }
+  25% {
+    transform: translateX(calc(-10% - 0.4rem));
+  }
+  45% {
+    transform: translateX(calc(-25% - 1rem));
+  }
+  50% {
+    transform: translateX(calc(-25% - 1rem));
+  }
+  70% {
+    transform: translateX(calc(-40% - 1.6rem));
+  }
+  75% {
+    transform: translateX(calc(-40% - 1.6rem));
+  }
+  95% {
+    transform: translateX(calc(-50% - 2rem));
+  }
+  100% {
+    transform: translateX(calc(-50% - 2rem));
+  }
+}
+
+.marquee-right .marquee-content {
+  animation: marqueeRight 20s linear infinite;
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(calc(-50% - 2rem));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-text {
+  font-family: "Sora", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #1e293b 0%, #475569 50%, #1e293b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.marquee-text.text-indigo-500 {
+  background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 50%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 4px 8px rgba(20, 184, 166, 0.3));
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(
+      rgba(99, 102, 241, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridMove 8s linear infinite;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 30%,
+    transparent 70%
+  );
+}
+
+.grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(99, 102, 241, 0.05) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 2px, transparent 2px);
+  background-size: 120px 120px;
+  animation: gridMove 12s linear infinite reverse;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: perspective(500px) rotateX(60deg) translateY(0);
+  }
+  100% {
+    transform: perspective(500px) rotateX(60deg) translateY(60px);
+  }
+}
