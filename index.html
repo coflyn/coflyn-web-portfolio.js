@@ -44,7 +44,14 @@
       id="home"
       class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
     >
-      <div class="grid-bg"></div>
+      <!-- Lava Lamp Background -->
+      <div class="lava-bg">
+        <div class="lava-blob blob-1"></div>
+        <div class="lava-blob blob-2"></div>
+        <div class="lava-blob blob-3"></div>
+        <div class="lava-blob blob-4"></div>
+        <div class="lava-blob blob-5"></div>
+      </div>
       <div class="w-full space-y-4">
         <div class="marquee-container marquee-left">
           <div class="marquee-content">
@@ -125,6 +132,70 @@
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
       </a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="about-section">
+      <!-- Grid Background -->
+      <div class="grid-bg"></div>
+
+      <!-- Split Layout Container -->
+      <div class="split-container">
+        <!-- Left Side - Photo -->
+        <div class="split-left">
+          <div class="photo-frame">
+            <img
+              src="assets/img/icon.png"
+              alt="Raffi Andhika R"
+              class="about-photo"
+            />
+          </div>
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="split-right">
+          <span class="about-label">About Me</span>
+          <h2 class="about-name">Raffi Andhika R</h2>
+          <p class="about-role">Junior Frontend Developer</p>
+
+          <p class="about-bio">
+            A passionate software developer from Indonesia who loves creating
+            beautiful and functional web experiences. I specialize in frontend
+            development with a keen eye for design and user experience.
+          </p>
+
+          <!-- Animated Stats -->
+          <div class="stats-container">
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="20">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="tech-stack">
+            <span class="tech-label">Tech Stack</span>
+            <div class="tech-icons">
+              <span class="tech-item">HTML</span>
+              <span class="tech-item">CSS</span>
+              <span class="tech-item">JavaScript</span>
+              <span class="tech-item">React</span>
+              <span class="tech-item">Tailwind</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="assets/js/script.js"></script>
