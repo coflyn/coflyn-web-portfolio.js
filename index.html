@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kvory</title>
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,185 +15,146 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen">
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-      <div class="loading-content">
-        <p class="loading-quote">"Code is poetry."</p>
-        <div class="loading-percent-wrapper">
-          <span class="loading-percent">0</span>
-          <span class="loading-symbol">%</span>
-        </div>
-      </div>
-    </div>
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex items-center justify-between"
-    >
-      <div class="flex items-center">
-        <img
-          src="assets/img/icon.png"
-          alt="Kvory"
-          class="w-10 h-10 rounded-lg"
-        />
-      </div>
-
-      <div class="text-slate-500 font-mono text-sm">
-        <span id="current-time">00:00:00</span>
-      </div>
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">Kvory</a>
+      <button class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
 
-    <section
-      id="home"
-      class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
-    >
-      <!-- Lava Lamp Background -->
-      <div class="lava-bg">
-        <div class="lava-blob blob-1"></div>
-        <div class="lava-blob blob-2"></div>
-        <div class="lava-blob blob-3"></div>
-        <div class="lava-blob blob-4"></div>
-        <div class="lava-blob blob-5"></div>
-      </div>
-      <div class="w-full space-y-4">
-        <div class="marquee-container marquee-left">
-          <div class="marquee-content">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
-              JUNIOR SOFTWARE DEVELOPER
-            </h1>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
-              JUNIOR SOFTWARE DEVELOPER
-            </h1>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
-              JUNIOR SOFTWARE DEVELOPER
-            </h1>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text">
-              JUNIOR SOFTWARE DEVELOPER
-            </h1>
-          </div>
-        </div>
-
-        <div class="marquee-container marquee-right">
-          <div class="marquee-content">
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold marquee-text text-indigo-500"
-            >
-              FRONTEND
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      <!-- Scroll Down Indicator -->
-      <a href="#about-me" class="scroll-indicator">
+    <aside class="sidebar">
+      <a href="#home" class="sidebar-link active" data-tooltip="Home">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
         >
-          <path d="M12 5v14M5 12l7 7 7-7" />
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
       </a>
-    </section>
+      <a href="#about-me" class="sidebar-link" data-tooltip="About">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </a>
+      <a href="#projects" class="sidebar-link" data-tooltip="Projects">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+          />
+        </svg>
+      </a>
+      <a href="#contact" class="sidebar-link" data-tooltip="Contact">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      </a>
+    </aside>
 
-    <!-- About Me Section -->
-    <section id="about-me" class="about-section">
-      <!-- Grid Background -->
-      <div class="grid-bg"></div>
-
-      <!-- Split Layout Container -->
-      <div class="split-container">
-        <!-- Left Side - Photo -->
-        <div class="split-left">
-          <div class="photo-frame">
-            <img
-              src="assets/img/icon.png"
-              alt="Raffi Andhika R"
-              class="about-photo"
-            />
+    <section id="home" class="home-section">
+      <div class="home-container">
+        <div class="home-content">
+          <span class="home-subtitle">R A F F I &nbsp; A N D H I K A</span>
+          <h1 class="home-title">Junior Software Developer</h1>
+          <p class="home-description">
+            Hi! I'm Raffi, a Junior Software Developer–focused student who
+            enjoys creating functional and visually appealing web applications.
+            I am passionate about learning new technologies, improving
+            problem-solving skills, and applying best practices to build
+            efficient and maintainable web projects as part of my academic
+            journey.
+          </p>
+          <div class="home-buttons">
+            <a href="#" class="btn btn-primary">Download CV</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
           </div>
         </div>
 
-        <!-- Right Side - Content -->
-        <div class="split-right">
-          <span class="about-label">About Me</span>
-          <h2 class="about-name">Raffi Andhika R</h2>
-          <p class="about-role">Junior Frontend Developer</p>
+        <div class="home-photo-wrapper">
+          <div class="home-photo-container">
+            <img
+              src="assets/img/gweh.jpg"
+              alt="Profile Photo"
+              class="home-photo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <p class="about-bio">
-            A passionate software developer from Indonesia who loves creating
-            beautiful and functional web experiences. I specialize in frontend
-            development with a keen eye for design and user experience.
-          </p>
+    <section id="about-me" class="about-section">
+      <div class="about-container">
+        <div class="section-header">
+          <span class="section-subtitle">A B O U T &nbsp; M E</span>
+          <h2 class="section-title">Get To Know Me</h2>
+        </div>
 
-          <!-- Animated Stats -->
-          <div class="stats-container">
-            <div class="stat-item">
-              <span class="stat-number" data-target="3">0</span>
+        <div class="about-content-wrapper">
+          <div class="about-info">
+            <p class="about-text">
+              A passionate software developer from Indonesia who loves creating
+              beautiful and functional web experiences. I specialize in frontend
+              development with a keen eye for design and user experience.
+            </p>
+            <p class="about-text">
+              I'm constantly learning and exploring new technologies to improve
+              my skills and deliver better solutions. When I'm not coding, I
+              enjoy exploring new design trends and contributing to open-source
+              projects.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="1">0</span>
               <span class="stat-suffix">+</span>
               <span class="stat-label">Years Experience</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="20">0</span>
+            <div class="stat-card">
+              <span class="stat-number" data-target="5">0</span>
               <span class="stat-suffix">+</span>
               <span class="stat-label">Projects Completed</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="10">0</span>
+            <div class="stat-card">
+              <span class="stat-number" data-target="2">0</span>
               <span class="stat-suffix">+</span>
-              <span class="stat-label">Happy Clients</span>
+              <span class="stat-label">Certificates</span>
             </div>
           </div>
+        </div>
 
-          <!-- Tech Stack -->
-          <div class="tech-stack">
-            <span class="tech-label">Tech Stack</span>
-            <div class="tech-icons">
-              <span class="tech-item">HTML</span>
-              <span class="tech-item">CSS</span>
-              <span class="tech-item">JavaScript</span>
-              <span class="tech-item">React</span>
-              <span class="tech-item">Tailwind</span>
-            </div>
+        <div class="tech-section">
+          <span class="tech-title">My Tech Stack</span>
+          <div class="tech-grid">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Tailwind</span>
+            <span class="tech-badge">Node.js</span>
           </div>
         </div>
       </div>
