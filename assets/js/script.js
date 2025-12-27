@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const navbarToggle = document.getElementById("navbar-toggle");
+  const offcanvas = document.getElementById("offcanvas");
+  const offcanvasOverlay = document.getElementById("offcanvas-overlay");
+  const offcanvasClose = document.getElementById("offcanvas-close");
+
+  function openOffcanvas() {
+    offcanvas?.classList.add("active");
+    offcanvasOverlay?.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeOffcanvas() {
+    offcanvas?.classList.remove("active");
+    offcanvasOverlay?.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  navbarToggle?.addEventListener("click", openOffcanvas);
+  offcanvasClose?.addEventListener("click", closeOffcanvas);
+  offcanvasOverlay?.addEventListener("click", closeOffcanvas);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeOffcanvas();
+  });
+
   const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
   function updateActiveLink() {
