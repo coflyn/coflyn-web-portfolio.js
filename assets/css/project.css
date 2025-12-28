@@ -336,3 +336,94 @@ html {
     flex-direction: column;
   }
 }
+
+body.dark-mode .project-page {
+  background: transparent;
+}
+
+body.dark-mode .page-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .page-title {
+  color: #ffffff;
+}
+
+body.dark-mode .highlight-info h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .highlight-description {
+  color: #cbd5e1;
+}
+
+body.dark-mode .highlight-tech span {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+body.dark-mode .highlight-image {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .btn-secondary {
+  border-color: #94a3b8;
+  color: #ffffff;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+body.dark-mode .section-heading {
+  color: #ffffff;
+}
+
+body.dark-mode .other-project-card {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .other-card-content h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .other-card-content p {
+  color: #94a3b8;
+}
+
+body.dark-mode .other-card-tech span {
+  background: #334155;
+  color: #94a3b8;
+}
+
+body.dark-mode .btn-view-live {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+body.dark-mode .btn-view-live:hover {
+  background: #e2e8f0;
+}
+
+body.dark-mode .btn-github {
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+body.dark-mode .btn-github:hover {
+  background: #334155;
+  border-color: #64748b;
+}
+
+body.dark-mode .back-icon {
+  background: #334155;
+  color: #94a3b8;
+}
+
+body.dark-mode .back-icon:hover {
+  background: #475569;
+  color: #ffffff;
+}

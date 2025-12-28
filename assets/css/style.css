@@ -242,6 +242,19 @@ section {
   background: #f1f5f9;
   padding-left: 80px;
   position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+#constellation-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: none;
+  pointer-events: none;
 }
 
 .home-container {
@@ -253,6 +266,8 @@ section {
   margin: 0 auto;
   padding: 2rem 4rem;
   gap: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .home-content {
@@ -268,6 +283,7 @@ section {
   color: #64748b;
   letter-spacing: 0.2em;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .home-title {
@@ -279,6 +295,7 @@ section {
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
   min-height: 3.85rem;
+  transition: color 0.3s ease;
 }
 
 .typewriter-text {
@@ -329,6 +346,7 @@ section {
   font-weight: 400;
   animation: cursorBlink 1s step-end infinite;
   margin-left: 2px;
+  transition: color 0.3s ease;
 }
 
 .typewriter-cursor.hidden {
@@ -352,6 +370,7 @@ section {
   margin-bottom: 2rem;
   max-width: 600px;
   text-align: justify;
+  transition: color 0.3s ease;
 }
 
 .home-buttons {
@@ -1177,4 +1196,160 @@ section {
   .contact-form .btn-primary {
     width: 100%;
   }
+}
+
+body.dark-mode {
+  background: #0f172a;
+}
+
+body.dark-mode #constellation-canvas {
+  display: block;
+}
+
+body.dark-mode .home-section {
+  background: transparent;
+}
+
+body.dark-mode .home-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .home-title {
+  color: #ffffff;
+}
+
+body.dark-mode .typewriter-cursor {
+  color: #ffffff;
+}
+
+body.dark-mode .home-description {
+  color: #cbd5e1;
+}
+
+body.dark-mode .about-section {
+  background: transparent;
+}
+
+body.dark-mode .section-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .section-title {
+  color: #ffffff;
+}
+
+body.dark-mode .about-text {
+  color: #cbd5e1;
+}
+
+body.dark-mode .stat-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: #334155;
+}
+
+body.dark-mode .stat-number {
+  color: #ffffff;
+}
+
+body.dark-mode .stat-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .projects-section {
+  background: transparent;
+}
+
+body.dark-mode .project-card {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contact-section {
+  background: transparent;
+}
+
+body.dark-mode .contact-info h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .contact-info p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .contact-item {
+  color: #cbd5e1;
+}
+
+body.dark-mode .contact-item svg {
+  stroke: #94a3b8;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: #334155;
+  color: #ffffff;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #64748b;
+}
+
+body.dark-mode .btn-primary {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #e2e8f0;
+  border-color: #e2e8f0;
+}
+
+body.dark-mode .btn-outline {
+  color: #ffffff;
+  border-color: #475569;
+}
+
+body.dark-mode .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+body.dark-mode .navbar-brand {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar-toggle span {
+  background: #ffffff;
+}
+
+body.dark-mode .sidebar {
+  background: rgba(30, 41, 59, 0.9);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .sidebar-link {
+  color: #94a3b8;
+}
+
+body.dark-mode .sidebar-link:hover,
+body.dark-mode .sidebar-link.active {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+body.dark-mode .social-icon {
+  color: #94a3b8;
+  border-color: #334155;
+}
+
+body.dark-mode .social-icon:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  transition: color 0.3s ease;
 }

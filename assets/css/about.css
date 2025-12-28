@@ -572,3 +572,150 @@ html {
     height: 36px;
   }
 }
+
+body.dark-mode .about-page {
+  background: transparent;
+}
+
+body.dark-mode .page-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode .page-title {
+  color: #ffffff;
+}
+
+body.dark-mode .who-am-i {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .profile-card {
+  border-bottom-color: #334155;
+}
+
+body.dark-mode .profile-info h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .profile-info .role {
+  color: #94a3b8;
+}
+
+body.dark-mode .profile-info .location {
+  color: #94a3b8;
+}
+
+body.dark-mode .social-link {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+body.dark-mode .social-link:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+body.dark-mode .bio-content p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .section-heading {
+  color: #ffffff;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .tech-icon-item,
+body.dark-mode .tool-item {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-icon {
+  color: #94a3b8;
+}
+
+body.dark-mode .skill-card h3,
+body.dark-mode .tool-name {
+  color: #ffffff;
+}
+
+body.dark-mode .skill-card p {
+  color: #94a3b8;
+}
+
+body.dark-mode .tech-icon-item span {
+  color: #cbd5e1;
+}
+
+body.dark-mode .timeline::before {
+  background: #334155;
+}
+
+body.dark-mode .timeline-content {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .timeline-content h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .timeline-institution {
+  color: #94a3b8;
+}
+
+body.dark-mode .timeline-description {
+  color: #cbd5e1;
+}
+
+body.dark-mode .timeline-item:last-child::after {
+  background: #0f172a;
+}
+
+body.dark-mode .credential-card {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .credential-badge {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+body.dark-mode .credential-badge svg {
+  color: #ffffff;
+}
+
+body.dark-mode .credential-info h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .credential-issuer {
+  color: #94a3b8;
+}
+
+body.dark-mode .credential-date {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+body.dark-mode .credential-btn {
+  color: #cbd5e1;
+  border-color: #475569;
+}
+
+body.dark-mode .credential-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+body.dark-mode .back-icon {
+  background: #334155;
+  color: #94a3b8;
+}
+
+body.dark-mode .back-icon:hover {
+  background: #475569;
+  color: #ffffff;
+}

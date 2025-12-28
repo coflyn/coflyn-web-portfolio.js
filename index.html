@@ -14,8 +14,24 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-mode-loading");
+      }
+    </script>
+    <style>
+      .dark-mode-loading body {
+        background: #0f172a !important;
+      }
+    </style>
   </head>
   <body class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen">
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+    <canvas id="constellation-canvas"></canvas>
     <nav class="navbar">
       <a href="#" class="navbar-brand">Kvory</a>
       <button class="navbar-toggle" id="navbar-toggle">
