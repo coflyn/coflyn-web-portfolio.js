@@ -228,13 +228,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (newMode === "dark") {
         if (renderer) renderer.clear();
-        canvas.style.display = "none";
-        createCanvas2D().style.display = "block";
+        createCanvas2D(); // ensure canvas2D exists
         initConstellation();
         animateConstellation();
       } else {
-        if (canvas2D) canvas2D.style.display = "none";
-        canvas.style.display = "block";
+        // Clear constellation canvas
+        if (canvas2D) {
+          const ctx = canvas2D.getContext("2d");
+          if (ctx) ctx.clearRect(0, 0, canvas2D.width, canvas2D.height);
+        }
         if (!scene) init3D();
         animate3D();
       }
@@ -272,6 +274,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("darkMode", "enabled");
     } else {
       localStorage.setItem("darkMode", "disabled");
+      // Remove the dark-mode-loading class from html element (used for flash prevention)
+      document.documentElement.classList.remove("dark-mode-loading");
     }
   });
 

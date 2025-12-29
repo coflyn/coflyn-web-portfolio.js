@@ -4,7 +4,7 @@ html {
 
 .about-page {
   min-height: 100vh;
-  background: rgba(241, 245, 249, 0.7);
+  background: transparent;
   padding: 6rem 2rem 4rem;
 }
 
@@ -65,11 +65,13 @@ html {
 }
 
 .who-am-i {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 2.5rem;
   margin-bottom: 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .profile-card {
@@ -186,11 +188,13 @@ html {
 }
 
 .skill-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -236,10 +240,12 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -267,11 +273,13 @@ html {
 }
 
 .tool-item {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 1.5rem 1rem;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -371,10 +379,12 @@ html {
 }
 
 .timeline-content {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
 }
@@ -431,10 +441,12 @@ html {
 }
 
 .credential-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   position: relative;
 }

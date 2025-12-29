@@ -67,10 +67,19 @@ body.dark-mode .toast-text {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
+  display: block !important;
 }
 
 body.dark-mode #bg-canvas {
-  display: none;
+  display: none !important;
+}
+
+#constellation-canvas {
+  display: none !important;
+}
+
+body.dark-mode #constellation-canvas {
+  display: block !important;
 }
 
 section {
@@ -299,7 +308,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: rgba(241, 245, 249, 0.7);
+  background: transparent;
   padding-left: 80px;
   position: relative;
   overflow: hidden;
@@ -807,7 +816,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(241, 245, 249, 0.7);
+  background: transparent;
   padding: 6rem 2rem;
   padding-left: 80px;
   scroll-snap-align: start;
@@ -877,14 +886,14 @@ section {
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
 
 .quick-fact-item:hover {
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.9);
   transform: translateX(5px);
 }
 
@@ -909,12 +918,12 @@ section {
 }
 
 .stat-card {
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .stat-card:hover {
@@ -1022,7 +1031,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(241, 245, 249, 0.7);
+  background: transparent;
   padding: 6rem 2rem;
   padding-left: 80px;
   scroll-snap-align: start;
@@ -1139,7 +1148,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(241, 245, 249, 0.7);
+  background: transparent;
   padding: 6rem 2rem;
   padding-left: 80px;
   scroll-snap-align: start;
@@ -1230,8 +1239,9 @@ section {
 .form-group textarea {
   width: 100%;
   padding: 1rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   color: #1e293b;
   font-family: "Plus Jakarta Sans", sans-serif;
