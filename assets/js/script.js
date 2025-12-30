@@ -259,24 +259,26 @@ document.addEventListener("DOMContentLoaded", () => {
     switchMode();
   }
 
-  const navbarBrandToggle = document.querySelector(".navbar-brand");
-
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
   }
 
-  navbarBrandToggle?.addEventListener("click", (e) => {
-    e.preventDefault();
+  function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("darkMode", "enabled");
     } else {
       localStorage.setItem("darkMode", "disabled");
-      // Remove the dark-mode-loading class from html element (used for flash prevention)
       document.documentElement.classList.remove("dark-mode-loading");
     }
-  });
+  }
+
+  const sidebarDarkToggle = document.getElementById("sidebar-dark-toggle");
+  sidebarDarkToggle?.addEventListener("click", toggleDarkMode);
+
+  const offcanvasDarkToggle = document.getElementById("offcanvas-dark-toggle");
+  offcanvasDarkToggle?.addEventListener("click", toggleDarkMode);
 
   const navbarToggle = document.getElementById("navbar-toggle");
   const offcanvas = document.getElementById("offcanvas");
@@ -302,6 +304,35 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeOffcanvas();
   });
+
+  const sections = document.querySelectorAll("section[id]");
+  const offcanvasLinks = document.querySelectorAll(".offcanvas-link");
+
+  function updateOffcanvasActiveState() {
+    const scrollY = window.scrollY + window.innerHeight / 3;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        offcanvasLinks.forEach((link) => {
+          link.classList.remove("active");
+          const href = link.getAttribute("href");
+          if (
+            href &&
+            (href === `#${sectionId}` || href.includes(`#${sectionId}`))
+          ) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateOffcanvasActiveState);
+  updateOffcanvasActiveState();
 
   const typewriterElement = document.querySelector(".typewriter-text");
   const cursorElement = document.querySelector(".typewriter-cursor");
