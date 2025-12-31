@@ -121,7 +121,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Raffi Andhika**
 
-- Website: [kvory.vercel.app](https://kvory.vercel.app)
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Website: [kvorys.vercel.app](https://kvorys.vercel.app)
+- GitHub: [@Kvoryz](https://github.com/Kvoryz)
 
 ---
