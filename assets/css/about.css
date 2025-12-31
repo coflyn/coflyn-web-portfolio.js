@@ -13,8 +13,10 @@ html::-webkit-scrollbar {
 }
 
 body {
-  overflow: visible !important;
+  overflow-x: clip;
+  overflow-y: visible;
   height: auto;
+  max-width: 100vw;
 }
 
 .about-page {
@@ -231,6 +233,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 4rem 4rem;
+  overflow: hidden;
 }
 
 .who-am-i-content {
@@ -300,15 +303,15 @@ body {
 }
 
 .polaroid-stack:hover .polaroid-back {
-  transform: translateX(-120%) rotate(-15deg);
+  transform: translateX(-80%) rotate(-12deg);
 }
 
 .polaroid-stack:hover .polaroid-middle {
-  transform: translateX(-50%) translateY(-20px) rotate(0deg);
+  transform: translateX(-50%) translateY(-15px) rotate(0deg);
 }
 
 .polaroid-stack:hover .polaroid-front {
-  transform: translateX(20%) rotate(10deg);
+  transform: translateX(-20%) rotate(8deg);
 }
 
 .polaroid-stack:hover .polaroid img {
