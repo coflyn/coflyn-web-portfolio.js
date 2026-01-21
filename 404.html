@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <title>404 - Page Not Found | Kvory</title>
+    <link rel="icon" type="image/png" href="assets/img/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-mode-loading");
+      }
+    </script>
+    <style>
+      .dark-mode-loading body {
+        background: #0f172a !important;
+      }
+      .error-title {
+        color: #1e293b !important;
+      }
+      .error-subtitle {
+        color: #1e293b !important;
+      }
+      .error-description {
+        color: #475569 !important;
+      }
+      body.dark-mode .error-title {
+        color: #e2e8f0 !important;
+      }
+      body.dark-mode .error-subtitle {
+        color: #cbd5e1 !important;
+      }
+      body.dark-mode .error-description {
+        color: #94a3b8 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen">
+    <script>
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">Kvory</a>
+      <button class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="offcanvas-overlay" id="offcanvas-overlay"></div>
+    <div class="offcanvas" id="offcanvas">
+      <div class="offcanvas-header">
+        <span class="offcanvas-brand">Menu</span>
+        <button class="offcanvas-close" id="offcanvas-close">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <nav class="offcanvas-nav">
+        <a href="index.html#home" class="offcanvas-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a href="index.html#about-me" class="offcanvas-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          About Me
+        </a>
+        <a href="index.html#projects" class="offcanvas-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          Projects
+        </a>
+        <a href="index.html#contact" class="offcanvas-link">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          Contact
+        </a>
+        <button class="offcanvas-toggle-dark" id="offcanvas-dark-toggle">
+          <svg
+            class="icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg
+            class="icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="text-dark">Dark Mode</span>
+          <span class="text-light">Light Mode</span>
+        </button>
+      </nav>
+    </div>
+
+    <aside class="sidebar">
+      <a href="index.html#home" class="sidebar-link" data-tooltip="Home">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </a>
+      <a href="index.html#about-me" class="sidebar-link" data-tooltip="About">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </a>
+      <a
+        href="index.html#projects"
+        class="sidebar-link"
+        data-tooltip="Projects"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+          />
+        </svg>
+      </a>
+      <a href="index.html#contact" class="sidebar-link" data-tooltip="Contact">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      </a>
+      <button
+        class="sidebar-toggle-dark"
+        id="sidebar-dark-toggle"
+        data-tooltip="Toggle Theme"
+      >
+        <svg
+          class="icon-sun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="icon-moon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </aside>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <section
+      class="h-screen w-full flex items-center justify-center relative z-10 pl-0 lg:pl-20"
+    >
+      <div class="text-center px-4" data-aos="fade-up">
+        <h1
+          class="error-title text-[8rem] sm:text-[12rem] font-bold leading-none font-['Sora'] select-none"
+        >
+          404
+        </h1>
+        <h2
+          class="error-subtitle text-2xl sm:text-3xl font-bold mt-4 mb-4 font-['Sora']"
+        >
+          Page Not Found
+        </h2>
+        <p class="error-description mb-8 max-w-md mx-auto">
+          The page you are looking for might have been removed, had its name
+          changed, or is temporarily unavailable.
+        </p>
+        <a
+          href="index.html"
+          class="btn btn-primary inline-flex items-center gap-2"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-5 h-5"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Back to Home
+        </a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>
