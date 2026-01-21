@@ -52,7 +52,9 @@ html::-webkit-scrollbar {
 body {
   overflow: visible;
   background: #f1f5f9;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 .time-toast {
@@ -961,10 +963,8 @@ body.dark-mode .offcanvas-toggle-dark .text-dark {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: linear-gradient(
-      rgba(99, 102, 241, 0.1) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridMove 8s linear infinite;
@@ -980,10 +980,8 @@ body.dark-mode .offcanvas-toggle-dark .text-dark {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(
-      rgba(99, 102, 241, 0.05) 2px,
-      transparent 2px
-    ),
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.05) 2px, transparent 2px),
     linear-gradient(90deg, rgba(99, 102, 241, 0.05) 2px, transparent 2px);
   background-size: 120px 120px;
   animation: gridMove 12s linear infinite reverse;
@@ -1033,6 +1031,203 @@ body.dark-mode .offcanvas-toggle-dark .text-dark {
   padding-left: 80px;
   scroll-snap-align: start;
   overflow: hidden;
+}
+
+/* New About Me Section - Minimalist Design */
+.about-section-new {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 6rem 2rem;
+  padding-left: 80px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.about-container-new {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-content-new {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4rem;
+}
+
+.about-title-new {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  font-style: italic;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.about-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #475569, #64748b);
+  border-radius: 2px;
+  margin: 1.5rem 0;
+}
+
+.about-description-new {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  max-width: 400px;
+  transition: color 0.3s ease;
+}
+
+.btn-learn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #1e293b;
+  color: #ffffff;
+  border: 2px solid #1e293b;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-learn-more:hover {
+  background: #334155;
+  border-color: #334155;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 41, 59, 0.2);
+}
+
+.about-image-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.about-image-new {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.about-image-new:hover {
+  filter: grayscale(0%);
+}
+
+/* Dark Mode for New About Section */
+body.dark-mode .about-title-new {
+  color: #f1f5f9;
+}
+
+body.dark-mode .about-divider {
+  background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+body.dark-mode .about-description-new {
+  color: #94a3b8;
+}
+
+body.dark-mode .btn-learn-more {
+  background: #64748b;
+}
+
+body.dark-mode .btn-learn-more:hover {
+  background: #94a3b8;
+}
+
+/* Responsive for New About Section */
+@media (max-width: 1024px) {
+  .about-section-new {
+    padding-left: 0;
+    padding: 6rem 2rem 4rem 2rem;
+    min-height: 100vh;
+  }
+
+  .about-container-new {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-content-new {
+    align-items: center;
+    padding-left: 0;
+    order: 2;
+  }
+
+  .about-image-wrapper {
+    justify-content: center;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .about-image-new {
+    max-width: 320px;
+  }
+
+  .about-description-new {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .about-title-new {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section-new {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .about-title-new {
+    font-size: 2.25rem;
+  }
+
+  .about-image-new {
+    max-width: 260px;
+  }
+
+  .about-description-new {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .about-divider {
+    width: 60px;
+    height: 3px;
+  }
+
+  .btn-learn-more {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.85rem;
+  }
 }
 
 .about-container {
@@ -1250,6 +1445,280 @@ body.dark-mode .offcanvas-toggle-dark .text-dark {
   padding: 6rem 2rem;
   padding-left: 80px;
   scroll-snap-align: start;
+}
+
+/* New Projects Section - Minimalist Design */
+.projects-section-new {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 6rem 2rem;
+  padding-left: 80px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.projects-container-new {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.projects-content-new {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4rem;
+}
+
+.projects-title-new {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  font-style: italic;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.projects-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #475569, #64748b);
+  border-radius: 2px;
+  margin: 1.5rem 0;
+}
+
+.projects-description-new {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  max-width: 400px;
+  transition: color 0.3s ease;
+}
+
+/* Stacked Cards Layout */
+.projects-stack-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.projects-stack {
+  position: relative;
+  width: 550px;
+  height: 500px;
+}
+
+.stack-image {
+  position: absolute;
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: grayscale(100%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.stack-image.shuffling {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stack-image:hover {
+  filter: grayscale(0%);
+  z-index: 10;
+}
+
+.stack-image.stack-1 {
+  top: 0;
+  right: 0;
+  transform: rotate(6deg);
+  z-index: 3;
+}
+
+.stack-image.stack-2 {
+  top: 100px;
+  right: 120px;
+  transform: rotate(-4deg);
+  z-index: 2;
+}
+
+.stack-image.stack-3 {
+  top: 200px;
+  right: 50px;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+
+.stack-image.stack-1:hover {
+  transform: rotate(6deg) scale(1.05);
+}
+
+.stack-image.stack-2:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.stack-image.stack-3:hover {
+  transform: rotate(3deg) scale(1.05);
+}
+
+/* Click Animation */
+.stack-image:active {
+  transform: scale(0.95) !important;
+  transition: transform 0.1s ease;
+}
+
+.stack-image.stack-1:active {
+  transform: rotate(6deg) scale(0.95) !important;
+}
+
+.stack-image.stack-2:active {
+  transform: rotate(-4deg) scale(0.95) !important;
+}
+
+.stack-image.stack-3:active {
+  transform: rotate(3deg) scale(0.95) !important;
+}
+
+/* Cursor pointer for clickable cards */
+.stack-image {
+  cursor: pointer;
+}
+
+/* Dark Mode for New Projects Section */
+body.dark-mode .projects-title-new {
+  color: #f1f5f9;
+}
+
+body.dark-mode .projects-divider {
+  background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+body.dark-mode .projects-description-new {
+  color: #94a3b8;
+}
+
+body.dark-mode .stack-image {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive for New Projects Section */
+@media (max-width: 1024px) {
+  .projects-section-new {
+    padding-left: 0;
+    padding: 6rem 2rem 4rem 2rem;
+    min-height: 100vh;
+  }
+
+  .projects-container-new {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .projects-content-new {
+    align-items: center;
+    padding-left: 0;
+    order: 2;
+  }
+
+  .projects-stack-wrapper {
+    justify-content: center;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .projects-stack {
+    width: 400px;
+    height: 350px;
+  }
+
+  .stack-image {
+    width: 260px;
+  }
+
+  .stack-image.stack-1 {
+    top: 0;
+    right: 20px;
+  }
+
+  .stack-image.stack-2 {
+    top: 80px;
+    right: 100px;
+  }
+
+  .stack-image.stack-3 {
+    top: 160px;
+    right: 50px;
+  }
+
+  .projects-description-new {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .projects-title-new {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-section-new {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .projects-title-new {
+    font-size: 2.25rem;
+  }
+
+  .projects-stack {
+    width: 300px;
+    height: 300px;
+  }
+
+  .stack-image {
+    width: 200px;
+  }
+
+  .stack-image.stack-1 {
+    top: 0;
+    right: 10px;
+  }
+
+  .stack-image.stack-2 {
+    top: 60px;
+    right: 70px;
+  }
+
+  .stack-image.stack-3 {
+    top: 120px;
+    right: 35px;
+  }
+
+  .projects-description-new {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .projects-divider {
+    width: 60px;
+    height: 3px;
+  }
 }
 
 .projects-container {

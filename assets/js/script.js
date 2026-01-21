@@ -1,10 +1,10 @@
 console.log(
   "%cHey there, curious developer!",
-  "font-size: 20px; font-weight: bold; color: #22c55e;"
+  "font-size: 20px; font-weight: bold; color: #22c55e;",
 );
 console.log(
   "%cLooking for something? Feel free to explore!",
-  "font-size: 14px; color: #64748b;"
+  "font-size: 14px; color: #64748b;",
 );
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         75,
         window.innerWidth / window.innerHeight,
         0.1,
-        1000
+        1000,
       );
       camera.position.z = 30;
 
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isDeleting) {
         cursorElement?.classList.add("hidden");
         const chars = typewriterElement.querySelectorAll(
-          ".char:not(.deleting)"
+          ".char:not(.deleting)",
         );
         if (chars.length > 0) {
           const lastChar = chars[chars.length - 1];
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(aboutSection);
@@ -514,4 +514,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCarousel();
   }
+
+  // Project Stack Shuffle Animation
+  const stackImages = document.querySelectorAll(".stack-image");
+  const stackPositions = [
+    { top: 0, right: 0, rotate: 6, zIndex: 3 }, // Position 1 (front)
+    { top: 100, right: 120, rotate: -4, zIndex: 2 }, // Position 2 (middle)
+    { top: 200, right: 50, rotate: 3, zIndex: 1 }, // Position 3 (back)
+  ];
+
+  let currentOrder = [0, 1, 2]; // Track which image is at which position
+
+  function updateStackPositions() {
+    stackImages.forEach((img, imgIndex) => {
+      const positionIndex = currentOrder.indexOf(imgIndex);
+      const pos = stackPositions[positionIndex];
+
+      img.style.top = `${pos.top}px`;
+      img.style.right = `${pos.right}px`;
+      img.style.transform = `rotate(${pos.rotate}deg)`;
+      img.style.zIndex = pos.zIndex;
+    });
+  }
+
+  stackImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      // If already at front, do nothing
+      const currentPosition = currentOrder.indexOf(index);
+      if (currentPosition === 0) return;
+
+      // Shuffle: move clicked image to front
+      currentOrder.splice(currentPosition, 1); // Remove from current position
+      currentOrder.unshift(index); // Add to front
+
+      // Add animation class
+      img.classList.add("shuffling");
+
+      // Update positions with animation
+      updateStackPositions();
+
+      // Remove animation class after transition
+      setTimeout(() => {
+        img.classList.remove("shuffling");
+      }, 500);
+    });
+  });
 });
