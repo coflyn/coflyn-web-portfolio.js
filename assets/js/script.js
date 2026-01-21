@@ -515,15 +515,14 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   }
 
-  // Project Stack Shuffle Animation
   const stackImages = document.querySelectorAll(".stack-image");
   const stackPositions = [
-    { top: 0, right: 0, rotate: 6, zIndex: 3 }, // Position 1 (front)
-    { top: 100, right: 120, rotate: -4, zIndex: 2 }, // Position 2 (middle)
-    { top: 200, right: 50, rotate: 3, zIndex: 1 }, // Position 3 (back)
+    { top: 0, right: 0, rotate: 6, zIndex: 3 },
+    { top: 100, right: 120, rotate: -4, zIndex: 2 },
+    { top: 200, right: 50, rotate: 3, zIndex: 1 },
   ];
 
-  let currentOrder = [0, 1, 2]; // Track which image is at which position
+  let currentOrder = [0, 1, 2];
 
   function updateStackPositions() {
     stackImages.forEach((img, imgIndex) => {
@@ -539,21 +538,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   stackImages.forEach((img, index) => {
     img.addEventListener("click", () => {
-      // If already at front, do nothing
       const currentPosition = currentOrder.indexOf(index);
       if (currentPosition === 0) return;
 
-      // Shuffle: move clicked image to front
-      currentOrder.splice(currentPosition, 1); // Remove from current position
-      currentOrder.unshift(index); // Add to front
+      currentOrder.splice(currentPosition, 1);
+      currentOrder.unshift(index);
 
-      // Add animation class
       img.classList.add("shuffling");
 
-      // Update positions with animation
       updateStackPositions();
 
-      // Remove animation class after transition
       setTimeout(() => {
         img.classList.remove("shuffling");
       }, 500);
