@@ -1,4 +1,4 @@
-# Kvory - Personal Portfolio Website
+# Coflyn - Personal Portfolio Website
 
 ![Version](https://img.shields.io/badge/version-2.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -19,7 +19,7 @@ A modern, responsive personal portfolio website featuring smooth animations, dar
 ## 📁 Project Structure
 
 ```
-Kvory V2/
+Coflyn V2/
 ├── index.html          # Main homepage
 ├── about.html          # About page with skills & education
 ├── project.html        # Projects showcase page
@@ -55,13 +55,13 @@ Kvory V2/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/kvory-portfolio.git
+   git clone https://github.com/coflyn/coflyn-web-portfolio.js.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd kvory-portfolio
+   cd coflyn-web-portfolio.js
    ```
 
 3. Open `index.html` in your browser or use a local server:
@@ -121,7 +121,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Raffi Andhika**
 
-- Website: [kvorys.vercel.app](https://kvorys.vercel.app)
-- GitHub: [@Kvoryz](https://github.com/Kvoryz)
+- Website: [coflyn.vercel.app](https://coflyn.vercel.app)
+- GitHub: [@coflyn](https://github.com/coflyn)
 
 ---
